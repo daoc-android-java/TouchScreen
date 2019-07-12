@@ -12,15 +12,20 @@ public class DrawingView extends View {
     Paint bGround;
     float x;
     float y;
-    int blue = 255;
+    int blue2white;
 
     public DrawingView(Context context) {
         super(context);
 
+        x = 0;
+        y = 0;
+
         paint = new Paint();
         paint.setARGB(255, 0, 255, 0);
+
+        blue2white = 0;
         bGround = new Paint();
-        bGround.setARGB(0, 0, 0, blue);
+        bGround.setARGB(255, blue2white, blue2white, 255);
     }
 
     @Override
@@ -28,8 +33,8 @@ public class DrawingView extends View {
         super.onDraw(canvas);
         canvas.drawPaint(bGround);
         canvas.drawCircle(x, y, 20, paint);
-        blue -= 20;
-        bGround.setARGB(0, 0, 0, blue);
+        blue2white = (blue2white + 20) % 255;
+        bGround.setARGB(255, blue2white, blue2white, 255);
     }
 
     @Override
