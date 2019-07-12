@@ -40,7 +40,7 @@ public class DrawingView extends View {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
-        switch(event.getAction()) {
+        switch(event.getActionMasked()) {
             case (MotionEvent.ACTION_DOWN):
                 x = event.getX();
                 y = event.getY();
