@@ -19,7 +19,7 @@ public class DrawingView2 extends View {
         paint = new Paint();
         paint.setColor(Color.RED);
         paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(5);
+        paint.setStrokeWidth(20);
 
         path = new Path();
     }

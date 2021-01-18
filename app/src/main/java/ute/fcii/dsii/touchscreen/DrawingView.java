@@ -32,7 +32,7 @@ public class DrawingView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         canvas.drawPaint(bGround);
-        canvas.drawCircle(x, y, 20, paint);
+        canvas.drawCircle(x, y, 200, paint);
         blue2white = (blue2white + 20) % 255;
         bGround.setARGB(255, blue2white, blue2white, 255);
     }
