@@ -23,7 +23,7 @@ public class DrawingView3 extends View {
 
         paint = new Paint();
         paint.setColor(Color.BLUE);
-        paint.setStrokeWidth(300);
+        paint.setStrokeWidth(50);
     }
 
     @Override
